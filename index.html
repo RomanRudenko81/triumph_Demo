@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triumph Mockup</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.icons span {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    background: url("https://images.unsplash.com/photo-1520975922284-9e0b0f9d7e79") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* CATEGORIES */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 40px;
+}
+
+.category {
+    height: 250px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* PROMO */
+.promo {
+    padding: 60px;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.promo h2 {
+    font-size: 28px;
+}
+
+/* NEWSLETTER */
+.newsletter {
+    padding: 60px;
+    text-align: center;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    padding: 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+}
+
+footer a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">TRIUMPH</div>
+
+    <nav>
+        <a href="#">BHs</a>
+        <a href="#">Slips</a>
+        <a href="#">Nachtwäsche</a>
+        <a href="#">Neu</a>
+        <a href="#">Sale</a>
+    </nav>
+
+    <div class="icons">
+        <span>🔍</span>
+        <span>👤</span>
+        <span>🛒</span>
+    </div>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Neue Kollektion</h1>
+        <button>Jetzt entdecken</button>
+    </div>
+</section>
+
+<section class="categories">
+    <div class="category">BHs</div>
+    <div class="category">Slips</div>
+    <div class="category">Shapewear</div>
+    <div class="category">Nachtwäsche</div>
+</section>
+
+<section class="promo">
+    <h2>Exklusive Angebote & neue Styles</h2>
+    <p>Jetzt entdecken und sparen</p>
+</section>
+
+<section class="newsletter">
+    <h2>Newsletter abonnieren</h2>
+    <input type="email" placeholder="E-Mail Adresse">
+    <button>Anmelden</button>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h4>Service</h4>
+            <a href="#">Kontakt</a>
+            <a href="#">FAQ</a>
+            <a href="#">Retouren</a>
+        </div>
+
+        <div>
+            <h4>Unternehmen</h4>
+            <a href="#">Über uns</a>
+            <a href="#">Karriere</a>
+        </div>
+
+        <div>
+            <h4>Rechtliches</h4>
+            <a href="#">AGB</a>
+            <a href="#">Datenschutz</a>
+        </div>
+
+        <div>
+            <h4>Folge uns</h4>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
