@@ -5,133 +5,182 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Triumph Mockup</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: #222;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #111;
 }
 
 /* HEADER */
 header {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     background: white;
     border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    z-index: 100;
+    padding: 18px 60px;
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-size: 26px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
 }
 
 nav a {
-    margin: 0 15px;
     text-decoration: none;
-    color: #333;
+    color: #222;
     font-size: 14px;
+    letter-spacing: 1px;
 }
 
-.icons span {
-    margin-left: 15px;
-    cursor: pointer;
+.icons {
+    display: flex;
+    gap: 18px;
+    font-size: 18px;
 }
 
 /* HERO */
 .hero {
-    height: 80vh;
-    background: url("https://images.unsplash.com/photo-1520975922284-9e0b0f9d7e79") center/cover no-repeat;
+    margin-top: 80px;
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+                url("https://picsum.photos/1920/1080") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     text-align: center;
+    color: white;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 56px;
+    font-weight: 300;
     margin-bottom: 20px;
 }
 
 .hero button {
-    padding: 12px 25px;
-    background: white;
+    padding: 14px 32px;
     border: none;
+    background: white;
+    color: black;
+    font-size: 14px;
     cursor: pointer;
 }
 
-/* CATEGORIES */
+/* CATEGORY GRID */
 .categories {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 40px;
+    gap: 12px;
+    padding: 60px;
 }
 
 .category {
-    height: 250px;
-    background: #ddd;
+    height: 320px;
+    background: #eee;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
     font-size: 18px;
+    font-weight: 500;
 }
 
-/* PROMO */
-.promo {
+/* PRODUCT GRID */
+.products {
     padding: 60px;
-    background: #f7f7f7;
-    text-align: center;
 }
 
-.promo h2 {
-    font-size: 28px;
+.products h2 {
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product {
+    background: #f5f5f5;
+    height: 300px;
+    position: relative;
+}
+
+.product span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 14px;
 }
 
 /* NEWSLETTER */
 .newsletter {
-    padding: 60px;
+    padding: 80px;
     text-align: center;
+    background: #fafafa;
+}
+
+.newsletter h2 {
+    margin-bottom: 20px;
+    font-weight: 400;
 }
 
 .newsletter input {
-    padding: 10px;
-    width: 250px;
-    margin-right: 10px;
+    padding: 12px;
+    width: 260px;
+    border: 1px solid #ccc;
 }
 
 .newsletter button {
-    padding: 10px 20px;
+    padding: 12px 20px;
+    margin-left: 10px;
+    border: none;
+    background: black;
+    color: white;
 }
 
 /* FOOTER */
 footer {
     background: #111;
     color: white;
-    padding: 40px;
+    padding: 60px;
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 40px;
 }
 
 footer h4 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: 400;
 }
 
 footer a {
     display: block;
-    color: #ccc;
     text-decoration: none;
-    margin-bottom: 5px;
+    color: #bbb;
+    margin-bottom: 8px;
     font-size: 14px;
 }
 
@@ -142,7 +191,6 @@ footer a {
 
 <header>
     <div class="logo">TRIUMPH</div>
-
     <nav>
         <a href="#">BHs</a>
         <a href="#">Slips</a>
@@ -150,7 +198,6 @@ footer a {
         <a href="#">Neu</a>
         <a href="#">Sale</a>
     </nav>
-
     <div class="icons">
         <span>🔍</span>
         <span>👤</span>
@@ -160,8 +207,8 @@ footer a {
 
 <section class="hero">
     <div>
-        <h1>Neue Kollektion</h1>
-        <button>Jetzt entdecken</button>
+        <h1>Feel Your Freedom</h1>
+        <button>JETZT SHOPPEN</button>
     </div>
 </section>
 
@@ -172,9 +219,14 @@ footer a {
     <div class="category">Nachtwäsche</div>
 </section>
 
-<section class="promo">
-    <h2>Exklusive Angebote & neue Styles</h2>
-    <p>Jetzt entdecken und sparen</p>
+<section class="products">
+    <h2>Beliebte Produkte</h2>
+    <div class="product-grid">
+        <div class="product"><span>Produkt 1</span></div>
+        <div class="product"><span>Produkt 2</span></div>
+        <div class="product"><span>Produkt 3</span></div>
+        <div class="product"><span>Produkt 4</span></div>
+    </div>
 </section>
 
 <section class="newsletter">
@@ -191,21 +243,18 @@ footer a {
             <a href="#">FAQ</a>
             <a href="#">Retouren</a>
         </div>
-
         <div>
             <h4>Unternehmen</h4>
             <a href="#">Über uns</a>
             <a href="#">Karriere</a>
         </div>
-
         <div>
             <h4>Rechtliches</h4>
             <a href="#">AGB</a>
             <a href="#">Datenschutz</a>
         </div>
-
         <div>
-            <h4>Folge uns</h4>
+            <h4>Social</h4>
             <a href="#">Instagram</a>
             <a href="#">Facebook</a>
         </div>
